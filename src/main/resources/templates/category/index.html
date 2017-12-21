@@ -8,14 +8,10 @@
 
 <nav th:replace="fragments :: navigation"></nav>
 
-<!-- Not sure if I need this 3 default categories already provided <p th:unless="${categories} and ${categories.size()}">No Categories</p> -->
-
 <ul th:each = "category : ${categories}">
     <li th:text = "${category.name}"></li>
 
 </ul>
-
-<!-- TODO refine index view, returning error message -->
 
 <a href="/category/add">Add Category</a>
 
